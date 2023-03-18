@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: my-mongo-container
+    restart: always
+    volumes:
+      - my-chat-app-data:/data/db:rw
+    ports:
+      - "27017:27017"
+
+volumes:
+  my-chat-app-data:
